@@ -1,0 +1,12 @@
+body {
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Sans HK", sans-serif;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
