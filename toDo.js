@@ -2,10 +2,16 @@ const taskButton = document.getElementById("click");
 const inputTask = document.getElementById("inputTask")
 
 const generateButtonToDo = () => {
-    inputTask.value
+    showList(inputTask.value)
 
 };
 taskButton.addEventListener("click", generateButtonToDo);
+
+const removeToDo =(toDo)=> {
+  const removeDiv = document.createElement('div');
+  removeDiv.className = 'removeDivSection';
+  section.appendChild(removeDiv);
+};
 
 const showList = (toDo) => {
   const container = document.getElementsByClassName("container")[0];
@@ -15,22 +21,20 @@ const showList = (toDo) => {
 };
 
 const addToDo = (toDo) => {
-  const section = createDivSection();
 
-  const itemList = document.createElement("p");
-  itemList.id ="list";
-  itemList.innerHTML = toDo.value;
-  section.appendChild(itemList);
+  const addItem = document.createElement("div");
+  addItem.id ="addToDo";
+  addItem.innerHTML = toDo;
+  return addItem
 
-  const removeDiv = document.createElement('div');
-  removeDiv.className = 'removeDivSection';
-  section.appendChild(removeDiv);
-
-  return section;
 };
+const listTodo = (toDo) =>{
 
-function createDivSection() {
-  const section = document.createElement("div");
-  section.className = "divSection";
-  return section;
+
 }
+
+
+
+
+
+
