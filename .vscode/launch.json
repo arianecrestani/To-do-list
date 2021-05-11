@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "name": "file:///Users/arianecrestani/Documents/GitHub/toDoList/index.html",
+            "request": "launch",
+            "url": "file:///Users/arianecrestani/Documents/GitHub/toDoList/index.html"
+        }
+    ]
+}

@@ -2,12 +2,13 @@ const taskButton = document.getElementById("click");
 const inputTask = document.getElementById("inputTask")
 const addToDo = document.getElementById ("addToDo")
 
-const generateButtonToDo = () => {
+const taskButtonEventHandler = () => {
 
     showList(inputTask.value)
+    console.log('hello')
    
 };
-taskButton.addEventListener("click", generateButtonToDo);
+taskButton.addEventListener("click", taskButtonEventHandler);
 addToDo.addEventListener('click', deleteTask);
 
 
@@ -28,6 +29,8 @@ const addToDo = (toDo) => {
   const addItem = document.createElement("div");
   addItem.id ="addToDo";
   addItem.innerHTML = toDo;
+
+  const itemTodo = document.createElement('')
   return addItem
 
 };
