@@ -1,58 +1,27 @@
 const taskButton = document.getElementById("click");
 const inputTask = document.getElementById("inputTask")
-const addToDo = document.getElementById ("addToDo")
 
 const taskButtonEventHandler = () => {
-
     showList(inputTask.value)
-    console.log('hello')
-   
 };
+
 taskButton.addEventListener("click", taskButtonEventHandler);
-addToDo.addEventListener('click', deleteTask);
-
-
 
 const showList = (toDo) => {
   const container = document.getElementsByClassName("container")[0];
-  container.innerHTML = "";
-
-  container.appendChild(addToDo(toDo));
+  container.appendChild(createItem(toDo));
+  inputTask.value = "";
 };
 
-const deleteTask = () => {
- let taks = []
-
+const createItem = (toDo) => {
+  const item = document.createElement("div");
+  item.id = "addToDo";
+  item.className = 'item'
+  item.innerHTML = toDo;
+  item.addEventListener("click", deleteItem);
+  return item
 };
 
-const addToDo = (toDo) => {
-  const addItem = document.createElement("div");
-  addItem.id ="addToDo";
-  addItem.innerHTML = toDo;
-
-  const itemTodo = document.createElement('')
-  return addItem
-
-};
-
-const toDoList = (list) => {
-
-  const listDiv = document.createElement("div");
-  listDiv .id ="listDiv";
-  listDiv .innerHTML = list;
-  listDiv.appendChild(addItem)
-  return listDiv
-
-
+const deleteItem = (this) => {
+  this.r
 }
-// function createDivSection() {
-//   const section = document.createElement("div");
-//   section.className = "divSection";
-//   return section;
-// }
-
-
-
-
-
-
