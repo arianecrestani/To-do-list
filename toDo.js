@@ -22,6 +22,6 @@ const createItem = (toDo) => {
   return item
 };
 
-const deleteItem = (this) => {
-  this.r
+const deleteItem = (event) => {
+  event.target.remove();
 }
