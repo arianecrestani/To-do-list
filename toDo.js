@@ -6,8 +6,12 @@ const taskButtonEventHandler = () => {
     showList(inputTask.value);
   }
 };
+const removeSpaces = () => {
+  inputTask.value = inputTask.value.split(" ").join("");
+};
 
 taskButton.addEventListener("click", taskButtonEventHandler);
+inputTask.addEventListener("blur", removeSpaces);
 
 const showList = (toDo) => {
   const container = document.getElementsByClassName("add-item")[0];
