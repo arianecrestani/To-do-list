@@ -7,7 +7,7 @@ const taskButtonEventHandler = () => {
   }
 };
 const removeSpaces = () => {
-  inputTask.value = inputTask.value.split(" ").join("");
+  inputTask.value = inputTask.value.trim(" ");
 };
 
 taskButton.addEventListener("click", taskButtonEventHandler);

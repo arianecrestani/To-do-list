@@ -18,8 +18,8 @@ svg {
 .add-item {
   display: flex;
   flex-direction: column;
-  margin: 7%;
-  width: 43rem;
+  margin: 5%;
+  width: 30rem;
   grid-gap: 2rem;
 }
 
@@ -32,8 +32,9 @@ svg {
   border: solid;
   border-radius: 2px;
   font-size: 20px;
-  color: #385e72;
+  color:white;
   padding: 20px;
+  background-color:#385e72
 }
 #click {
   background-color: #6aabd2;
