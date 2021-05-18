@@ -1,8 +1,10 @@
 const taskButton = document.getElementById("click");
-const inputTask = document.getElementById("inputTask")
+const inputTask = document.getElementById("inputTask");
 
 const taskButtonEventHandler = () => {
-    showList(inputTask.value)
+  if (inputTask.value.length > 0) {
+    showList(inputTask.value);
+  }
 };
 
 taskButton.addEventListener("click", taskButtonEventHandler);
@@ -16,12 +18,12 @@ const showList = (toDo) => {
 const createItem = (toDo) => {
   const item = document.createElement("div");
   item.id = "addToDo";
-  item.className = 'item'
+  item.className = "item";
   item.innerHTML = toDo;
   item.addEventListener("click", deleteItem);
-  return item
+  return item;
 };
 
 const deleteItem = (event) => {
   event.target.remove();
-}
+};
