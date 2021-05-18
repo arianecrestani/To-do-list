@@ -1,25 +1,26 @@
 body {
-    margin: 0%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Noto Sans HK", sans-serif;
-  }
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 
+svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 .container {
   display: grid;
   grid-template-columns: auto auto;
-  margin-bottom: 30px;
-    
 }
+
 .add-item {
   display: flex;
   flex-direction: column;
   margin: 7%;
   width: 43rem;
   grid-gap: 2rem;
-
 }
 
 .toDoImage {
@@ -28,12 +29,31 @@ body {
 }
 
 #addToDo {
- border: solid;
+  border: solid;
   border-radius: 2px;
-font-size:30px;
+  font-size: 20px;
+  color: #385e72;
+  padding: 20px;
 }
 #click {
-  background-color: black;
+  background-color: #6aabd2;
   border: none;
   color: white;
+  font-size: 20px;
+  padding: 15px;
+}
+#click:hover {
+  background-color: #385e72;
+}
+#inputTask {
+  outline: none;
+  border: solid;
+  border-radius: 2px;
+  color: #385e72;
+  padding: 22px;
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+h1 {
+  color: #385e72;
 }
