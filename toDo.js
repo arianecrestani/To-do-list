@@ -8,7 +8,7 @@ const taskButtonEventHandler = () => {
 taskButton.addEventListener("click", taskButtonEventHandler);
 
 const showList = (toDo) => {
-  const container = document.getElementsByClassName("container")[0];
+  const container = document.getElementsByClassName("add-item")[0];
   container.appendChild(createItem(toDo));
   inputTask.value = "";
 };

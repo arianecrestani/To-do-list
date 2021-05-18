@@ -8,10 +8,32 @@ body {
   }
 
 .container {
-    display: flex;
-    flex-direction: column;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 30px;
+    
+}
+.add-item {
+  display: flex;
+  flex-direction: column;
+  margin: 7%;
+  width: 43rem;
+  grid-gap: 2rem;
+
 }
 
-.addToDo {
+.toDoImage {
   display: flex;
+  margin: 50px;
+}
+
+#addToDo {
+ border: solid;
+  border-radius: 2px;
+font-size:30px;
+}
+#click {
+  background-color: black;
+  border: none;
+  color: white;
 }
