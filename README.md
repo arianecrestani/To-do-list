@@ -1,7 +1,8 @@
 # TO DO LIST
 
-
-organizing your day with a list of activities
+### Features
+- organizing your day with a list of activities
+- available for mobile
 
 
 
