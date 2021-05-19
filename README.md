@@ -1,3 +1,3 @@
 # toDoList
 
-![flwochart](.preview)
+![flwochart](.preview.png)
