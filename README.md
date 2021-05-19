@@ -6,4 +6,4 @@
 
 
 
-![flwochart](image/preview.png)
+![flwochart](images/preview.png)
