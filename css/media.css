@@ -1,0 +1,13 @@
+@media (max-width: 1250px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+      }
+}
+
+@media (max-width: 875px) {
+    .container {
+       display: flex;
+       flex-direction: column;
+      }
+}

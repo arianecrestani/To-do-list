@@ -19,7 +19,7 @@ svg {
   display: flex;
   flex-direction: column;
   margin: 5%;
-  width: 30rem;
+  width: auto;
   grid-gap: 2rem;
 }
 
