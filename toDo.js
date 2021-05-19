@@ -10,8 +10,15 @@ const removeSpaces = () => {
   inputTask.value = inputTask.value.trim(" ");
 };
 
+const enterPress = (e) => {
+  if(e.key === 'Enter'){
+    taskButtonEventHandler()
+  }
+}
+
 taskButton.addEventListener("click", taskButtonEventHandler);
 inputTask.addEventListener("blur", removeSpaces);
+inputTask.addEventListener("keypress", enterPress);
 
 const showList = (toDo) => {
   const container = document.getElementsByClassName("add-item")[0];
