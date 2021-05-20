@@ -3,6 +3,8 @@ const inputTask = document.getElementById("inputTask");
 const deleteBtn = document.getElementById("deleteBtn");
 const itemList = document.getElementById("itemList");
 
+deleteBtn.style.visibility = 'hidden';
+
 const taskButtonEventHandler = () => {
   if (inputTask.value.length > 0) {
     showList(inputTask.value);
@@ -21,6 +23,8 @@ const enterPress = (e) => {
 
 const deleteBtnEventHandler = () => {
   itemList.innerHTML = '';
+  deleteBtn.style.visibility = 'hidden';
+  
 }
 
 taskButton.addEventListener("click", taskButtonEventHandler);
@@ -31,6 +35,7 @@ deleteBtn.addEventListener("click", deleteBtnEventHandler)
 const showList = (toDo) => {
   itemList.appendChild(createItem(toDo));
   inputTask.value = "";
+  deleteBtn.style.visibility = '';
 };
 
 const createItem = (toDo) => {
