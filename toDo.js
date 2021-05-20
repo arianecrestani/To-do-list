@@ -3,6 +3,7 @@ const inputTask = document.getElementById("inputTask");
 const deleteBtn = document.getElementById("deleteBtn");
 const itemList = document.getElementById("itemList");
 
+//hidden deleteButton
 deleteBtn.style.visibility = 'hidden';
 
 const taskButtonEventHandler = () => {
@@ -10,7 +11,7 @@ const taskButtonEventHandler = () => {
     showList(inputTask.value);
   }
 };
-
+// remove space from imput
 const removeSpaces = () => {
   inputTask.value = inputTask.value.trim(" ");
 };
@@ -35,7 +36,7 @@ deleteBtn.addEventListener("click", deleteBtnEventHandler)
 const showList = (toDo) => {
   itemList.appendChild(createItem(toDo));
   inputTask.value = "";
-  deleteBtn.style.visibility = '';
+  deleteBtn.style.visibility = 'visible';
 };
 
 const createItem = (toDo) => {
@@ -46,7 +47,7 @@ const createItem = (toDo) => {
   item.addEventListener("click", deleteItem);
   return item;
 };
-
+//remove item when is clicked
 const deleteItem = (event) => {
   event.target.remove();
 };
