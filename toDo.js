@@ -7,6 +7,7 @@ const sortBtn = document.getElementById("orderList");
 //hidden deleteButton
 
 deleteBtn.style.visibility = "hidden";
+sortBtn.style.visibility = "hidden"
 
 const taskButtonEventHandler = () => {
   if (inputTask.value.length > 0) {
@@ -57,6 +58,7 @@ const showList = (toDo) => {
   itemList.appendChild(createItem(toDo));
   inputTask.value = "";
   deleteBtn.style.visibility = "visible";
+  sortBtn.style.visibility = "visible";
 };
 
 const createItem = (toDo) => {
