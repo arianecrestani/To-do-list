@@ -2,9 +2,11 @@ const taskButton = document.getElementById("click");
 const inputTask = document.getElementById("inputTask");
 const deleteBtn = document.getElementById("deleteBtn");
 const itemList = document.getElementById("itemList");
+const sortBtn = document.getElementById("orderList");
 
 //hidden deleteButton
-deleteBtn.style.visibility = 'hidden';
+
+deleteBtn.style.visibility = "hidden";
 
 const taskButtonEventHandler = () => {
   if (inputTask.value.length > 0) {
@@ -17,26 +19,44 @@ const removeSpaces = () => {
 };
 
 const enterPress = (e) => {
-  if(e.key === 'Enter'){
-    taskButtonEventHandler()
+  if (e.key === "Enter") {
+    taskButtonEventHandler();
   }
-}
+};
 
 const deleteBtnEventHandler = () => {
-  itemList.innerHTML = '';
-  deleteBtn.style.visibility = 'hidden';
-  
-}
+  itemList.innerHTML = "";
+  deleteBtn.style.visibility = "hidden";
+};
+
+const sortList = () => {
+  //trasformando a lista do html em array 
+  let sortDiv = Array.prototype.slice.call(itemList.children);
+
+  // ordenanando o array 
+  sortDiv.sort((a, b) => {
+    return a.innerHTML < b.innerHTML ? -1 : 1;
+  });
+
+  //limpando a lista no html 
+  itemList.innerHTML = "";
+
+  // e então retorna a lista adicionando os itens em ordem 
+  sortDiv.forEach(element => {
+    itemList.appendChild(element);
+  });
+};
 
 taskButton.addEventListener("click", taskButtonEventHandler);
 inputTask.addEventListener("blur", removeSpaces);
 inputTask.addEventListener("keypress", enterPress);
-deleteBtn.addEventListener("click", deleteBtnEventHandler)
+deleteBtn.addEventListener("click", deleteBtnEventHandler);
+sortBtn.addEventListener("click", sortList);
 
 const showList = (toDo) => {
   itemList.appendChild(createItem(toDo));
   inputTask.value = "";
-  deleteBtn.style.visibility = 'visible';
+  deleteBtn.style.visibility = "visible";
 };
 
 const createItem = (toDo) => {
