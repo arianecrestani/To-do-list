@@ -32,10 +32,10 @@ const deleteBtnEventHandler = () => {
 
 const sortList = () => {
   //trasformando a lista do html em array 
-  let sortDiv = Array.prototype.slice.call(itemList.children);
+  let sortDivList = Array.prototype.slice.call(itemList.children);
 
   // ordenanando o array 
-  sortDiv.sort((a, b) => {
+  sortDivList.sort((a, b) => {
     return a.innerHTML < b.innerHTML ? -1 : 1;
   });
 
@@ -43,7 +43,7 @@ const sortList = () => {
   itemList.innerHTML = "";
 
   // e então retorna a lista adicionando os itens em ordem 
-  sortDiv.forEach(element => {
+  sortDivList.forEach(element => {
     itemList.appendChild(element);
   });
 };
