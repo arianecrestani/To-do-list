@@ -20,9 +20,9 @@ svg {
 .add-item {
   display: flex;
   flex-direction: column;
-  margin: 11%;
+  margin: 4rem;
   width: auto;
-  grid-gap: 1rem;
+  grid-gap: 3rem;
 }
 
 .toDoImage {
@@ -62,16 +62,32 @@ svg {
 h1 {
   color: #385e72;
 }
+
+#itemList {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 0.8rem;
+}
+#hiddenBtn {
+  grid-gap: 1rem;
+  display: flex;
+  justify-content: center;
+}
 #deleteBtn {
+  background-color: #6aabd2;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 1rem;
+  outline: none;
+}
+#sortListBtn {
   background-color: #6aabd2;
   border: none;
   color: white;
   font-size: 20px;
   padding: 15px;
   outline: none;
-}
-#itemList {
-  display: flex;
-  flex-direction: column;
-  grid-gap: 0.8rem;
+  width: 7rem;
+
 }

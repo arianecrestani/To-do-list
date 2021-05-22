@@ -2,18 +2,18 @@ const taskButton = document.getElementById("click");
 const inputTask = document.getElementById("inputTask");
 const deleteBtn = document.getElementById("deleteBtn");
 const itemList = document.getElementById("itemList");
-const sortBtn = document.getElementById("orderList");
+const sortBtn = document.getElementById("sortListBtn");
+const hiddenDiv = document.getElementById("hiddenBtn")
 
-//hidden deleteButton
+hiddenDiv.style.visibility = "hidden";
 
-deleteBtn.style.visibility = "hidden";
-sortBtn.style.visibility = "hidden"
 
 const taskButtonEventHandler = () => {
   if (inputTask.value.length > 0) {
     showList(inputTask.value);
   }
 };
+
 // remove space from imput
 const removeSpaces = () => {
   inputTask.value = inputTask.value.trim(" ");
@@ -28,23 +28,23 @@ const enterPress = (e) => {
 const deleteBtnEventHandler = () => {
   itemList.innerHTML = "";
   deleteBtn.style.visibility = "hidden";
-  sortBtn.style.visibility = "hidden";
+  sortBtn.style.visibility = "hidden"; 
 };
 
 const sortList = () => {
-  //trasformando a lista do html em array 
+  //trasformando a lista do html em array
   let sortDivList = Array.prototype.slice.call(itemList.children);
 
-  // ordenanando o array 
+  // ordenanando o array
   sortDivList.sort((a, b) => {
     return a.innerHTML < b.innerHTML ? -1 : 1;
   });
 
-  //limpando a lista no html 
+  //limpando a lista no html
   itemList.innerHTML = "";
 
-  // e então retorna a lista adicionando os itens em ordem 
-  sortDivList.forEach(element => {
+  // e então retorna a lista adicionando os itens em ordem
+  sortDivList.forEach((element) => {
     itemList.appendChild(element);
   });
 };
