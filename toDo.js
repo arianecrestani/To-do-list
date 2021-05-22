@@ -28,6 +28,7 @@ const enterPress = (e) => {
 const deleteBtnEventHandler = () => {
   itemList.innerHTML = "";
   deleteBtn.style.visibility = "hidden";
+  sortBtn.style.visibility = "hidden";
 };
 
 const sortList = () => {
