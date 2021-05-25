@@ -19,8 +19,15 @@
   }
 }
 @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
-  .add-item {
-    grid-gap: 2rem;
-    padding: 0rem;
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 4rem;
+      }
+  
+    .add-item {
+    grid-gap: 4rem;
+    padding: 1rem;
+    margin: 2rem;
   }
 }
