@@ -3,10 +3,10 @@ const inputTask = document.getElementById("inputTask");
 const deleteBtn = document.getElementById("deleteBtn");
 const itemList = document.getElementById("itemList");
 const sortBtn = document.getElementById("sortListBtn");
-const hiddenDiv = document.getElementById("hiddenBtn")
+const hiddenDiv = document.getElementById("hiddenBtn");
+
 
 hiddenDiv.style.visibility = "hidden";
-
 
 const taskButtonEventHandler = () => {
   if (inputTask.value.length > 0) {
@@ -28,7 +28,7 @@ const enterPress = (e) => {
 const deleteBtnEventHandler = () => {
   itemList.innerHTML = "";
   deleteBtn.style.visibility = "hidden";
-  sortBtn.style.visibility = "hidden"; 
+  sortBtn.style.visibility = "hidden";
 };
 
 const sortList = () => {
@@ -55,6 +55,16 @@ inputTask.addEventListener("keypress", enterPress);
 deleteBtn.addEventListener("click", deleteBtnEventHandler);
 sortBtn.addEventListener("click", sortList);
 
+
+//eventList para quando fechar a pagina salvar os itens no storage
+window.onbeforeunload = () => {
+  const divList = Array.prototype.slice.call(itemList.children);
+  //para cada elemento do div list sera mapeado o valor do innerHtml
+  const todos = divList.map((element) => element.innerHTML); // pegando só o innerHtml
+
+  window.localStorage.setItem("todos",  JSON.stringify(todos));
+};
+
 const showList = (toDo) => {
   itemList.appendChild(createItem(toDo));
   inputTask.value = "";
@@ -74,3 +84,11 @@ const createItem = (toDo) => {
 const deleteItem = (event) => {
   event.target.remove();
 };
+
+
+const todos =  JSON.parse(window.localStorage.getItem("todos"));
+if (Array.isArray(todos)) {
+  todos.forEach((element) => {
+    showList(element);
+  });
+}
