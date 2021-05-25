@@ -25,7 +25,7 @@ svg {
   flex-direction: column;
   margin: 3rem;
   width: auto;
-  grid-gap: 4rem;
+  grid-gap: 3rem;
 }
 
 .toDoImage {
