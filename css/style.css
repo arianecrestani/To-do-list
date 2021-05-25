@@ -23,16 +23,14 @@ svg {
 .add-item {
   display: flex;
   flex-direction: column;
-  margin: 4rem;
+  margin: 3rem;
   width: auto;
-  grid-gap: 3rem;
-  box-shadow: 5px 5px 15px rgba(169, 165, 245, 0.2);
-  border-radius: 10px;
+  grid-gap: 4rem;
 }
 
 .toDoImage {
   display: flex;
-  margin: 1rem;
+  margin: 0rem;
 }
 
 #addToDo {
