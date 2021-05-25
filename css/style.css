@@ -81,8 +81,8 @@ h1 {
   background-color: #9f69f7;
   border: none;
   color: white;
-  font-size: 18px;
-  padding: 1rem;
+  font-size: 13px;
+  padding: 12px;
   outline: none;
 }
 #deleteBtn:hover {
@@ -92,10 +92,10 @@ h1 {
   background-color: #9f69f7;
   border: none;
   color: white;
-  font-size: 18px;
-  padding: 15px;
+  font-size: 13px;
+  padding: 12px;
   outline: none;
-  width: 7rem;
+  width: 5rem;
 }
 #sortListBtn:hover {
   background: linear-gradient(to right, #4776e6, #8e54e9);
