@@ -19,8 +19,8 @@
       }
 }
 @media (max-width: 375px) {
-    .container {
-       display: flex;
-       flex-direction: column;
-      }
+    .add-item {
+        grid-gap: 5rem;
+        padding: 2rem;
+        
 }
