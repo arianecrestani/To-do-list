@@ -18,6 +18,7 @@ svg {
 .container {
   display: grid;
   grid-template-columns: auto auto;
+
 }
 
 .add-item {
@@ -25,7 +26,7 @@ svg {
   flex-direction: column;
   margin: 3rem;
   width: auto;
-  grid-gap: 3rem;
+  justify-content: space-around;
 }
 
 .toDoImage {
@@ -47,6 +48,7 @@ svg {
   font-size: 20px;
   padding: 20px;
   outline: none;
+  ;
 }
 #click:hover {
   background: linear-gradient(to right, #4776e6, #8e54e9);
@@ -71,6 +73,7 @@ h1 {
   grid-gap: 0.8rem;
 }
 #hiddenBtn {
+  padding: 2rem;
   grid-gap: 1rem;
   display: flex;
   justify-content: center;
