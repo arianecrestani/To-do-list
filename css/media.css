@@ -13,4 +13,7 @@
     #click {
         margin-top: 1rem;
     }
+    #hiddenBtn {
+        justify-content: space-between;
+    }
   }
