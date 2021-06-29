@@ -1,4 +1,4 @@
-# TO DO LIST
+# To do list
 
 ### Feature
 - organizing your day with a list of activities
