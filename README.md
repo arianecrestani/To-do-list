@@ -1,5 +1,9 @@
 # To do list
 
+
+  This project was created with the intention of practicing
+
+
 ### Feature
 - organizing your day with a list of activities
 - available for mobile
